@@ -40,7 +40,7 @@ switch ($action) {
     mysqli_query_wrapper($dblink,"START TRANSACTION");
     $tc=mysqli_query_wrapper($dblink,"SELECT 1 FROM regvouchers WHERE voucher='$voucher'");
     if (mysqli_num_rows($tc)==1) {
-      mysqli_query_wrapper($dblink,"DELETE FROM regvouchers WHERE voucher='$voucher'");
+      //mysqli_query_wrapper($dblink,"DELETE FROM regvouchers WHERE voucher='$voucher'");
       $cpu=intval($_POST["cpu"]);
       $gpu=mysqli_real_escape_string($dblink,$_POST["gpus"]);
       $uid=mysqli_real_escape_string($dblink,$_POST["uid"]);
